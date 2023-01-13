@@ -21,9 +21,9 @@ class JenkinsTestApplicationTests {
         Assertions.assertEquals("Hello world", jenkinsTestApplication.hello());
     }
 
-//    @Test
-//    void testToFail() {
-//        Assertions.assertEquals("Test to fail", jenkinsTestApplication.hello());
-//    }
+    @Test
+    void testToFail() {
+        Assertions.assertEquals("Test to fail", jenkinsTestApplication.hello());
+    }
 
 }
