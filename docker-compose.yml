@@ -9,8 +9,10 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: test
     restart: always
-  java-program:
+  backend:
     build:
-      context: ./Dockerfile
+      context: ./jenkins-test
     ports:
-      - "8080:8080"
+      - '8080:8080'
+    expose:
+      - '8080'
