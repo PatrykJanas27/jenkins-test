@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Docker-Compose-Up') {
             steps {
-                sh "docker-compose -f docker-composeDev.yaml up --detach"
+                sh "docker-compose -f docker-compose.yaml up --detach"
             }
         }
     }
