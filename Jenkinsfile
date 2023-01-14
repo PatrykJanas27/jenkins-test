@@ -20,7 +20,7 @@ pipeline {
         stage('Docker-Compose-Up') {
             steps {
                 sh "COMPOSE_HTTP_TIMEOUT=300"
-                echo $COMPOSE_HTTP_TIMEOUT
+                echo "$COMPOSE_HTTP_TIMEOUT"
                 sh "docker-compose up --detach --build"
             }
         }
