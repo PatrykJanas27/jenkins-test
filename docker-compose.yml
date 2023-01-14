@@ -9,3 +9,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: test
     restart: always
+  java-program:
+    build:
+      context: ./Dockerfile
+    ports:
+      - "8080:8080"
