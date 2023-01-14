@@ -13,16 +13,21 @@ pipeline {
             }
         }
         stage('Test') {
-                    steps {
-                        // Run Maven on a Unix agent.
-                        sh "mvn test"
-                    }
-                }
+            steps {
+                // Run Maven on a Unix agent.
+                sh "mvn test"
+            }
+        }
+        stage('Docker-Compose-Up') {
+            steps {
+                sh "docker-compose -f docker-composeDev.yaml up"
+            }
+        }
         stage('Deploy-Production') {
-                            steps {
-                                // Run Maven on a Unix agent.
-                                echo "production deploying"
-                            }
-                        }
+            steps {
+                // Run Maven on a Unix agent.
+                echo "production deploying"
+            }
+        }
     }
 }
