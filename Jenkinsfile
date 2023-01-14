@@ -1,9 +1,21 @@
 pipeline {
     agent any
-        stage('Deploy-Production') {
+
+    stages {
+        stage('Build') {
             steps {
-                // Run Maven on a Unix agent.
-                echo "production deploying"
+                echo 'Building..'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
