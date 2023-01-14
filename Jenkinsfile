@@ -17,5 +17,10 @@ pipeline {
                 echo 'Deploying....'
             }
         }
+        stage('Docker-Compose-Up') {
+            steps {
+                sh "docker-compose -f docker-composeDev.yaml up --detach"
+            }
+        }
     }
 }
