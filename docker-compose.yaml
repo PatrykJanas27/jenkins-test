@@ -6,6 +6,6 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: rootTest1
-      MYSQL_DATABASE: test1
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
     restart: always
